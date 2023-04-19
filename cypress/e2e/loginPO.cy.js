@@ -37,4 +37,11 @@ describe('Pruebas_login', () => {
     secureAreaPage.comprobacionArea("Your password is invalid!")
   })
 
+  it('The user is NOT logged, wrong PASS', () => {
+    loginPage.introducirUsuario("tomsmith")
+    loginPage.introducirPassword("mala contra")
+    loginPage.clicarBotonLogin()
+    secureAreaPage.comprobacionArea("Your password is invalid!")
+  })
+
 })
